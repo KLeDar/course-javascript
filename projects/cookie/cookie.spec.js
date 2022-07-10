@@ -15,7 +15,7 @@ function getCookies() {
 describe('ДЗ 7.2 - Cookie editor', () => {
   require('./index');
 
-  const app = document.querySelector('#app');
+  const app = document.querySelector('#homework-container');
   let filterNameInput;
   let addNameInput;
   let addValueInput;
