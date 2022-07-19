@@ -1,0 +1,28 @@
+{
+  "proxy": {
+    "/geo-review/list": {
+      "target": "http://127.0.0.1:8181",
+      "pathRewrite": {
+        "^/geo-review": ""
+      },
+      "changeOrigin" : true,
+      "secure" : false
+    },
+    "/geo-review/add": {
+      "target": "http://127.0.0.1:8181",
+      "pathRewrite": {
+        "^/geo-review": ""
+      },
+      "changeOrigin" : true,
+      "secure" : false
+    },
+    "/geo-review/coords": {
+      "target": "http://127.0.0.1:8181",
+      "pathRewrite": {
+        "^/geo-review": ""
+      },
+      "changeOrigin" : true,
+      "secure" : false
+    }
+  }
+}
