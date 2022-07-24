@@ -28,11 +28,10 @@ export default class SimpleChat {
         this.onSend.bind(this)
       ),
       userPhoto: new UserPhoto(
-        document.querySelector('[data-role=user-photo]'),
+        document.querySelector('[data-role=user-photo-change]'),
         this.onUpload.bind(this)
       ),
     };
-
     this.ui.loginWindow.show();
   }
 

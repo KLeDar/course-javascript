@@ -35,6 +35,26 @@
         font-size: 18px;
         font-weight: bold;
     }
+    .user-photo-button {
+        font-size: 14px;
+    }
+    #change-photo {
+        --bs-modal-bg:  #17212b;
+        --bs-modal-color: white;
+    }
+    #change-photo-button {
+        margin-left: 15px;
+    }
+
+    .user-photo-change, .message-item-photo {
+        display: block;
+        margin: 0 auto;
+        background: url(/projects/simple-chat/no-photo.png);
+        background-size: cover;
+        border-radius: 50%;
+        width: 300px;
+        height: 300px;
+    }
 
     .user-photo, .message-item-photo {
         margin-right: 15px;
@@ -190,6 +210,9 @@
             <div class="user-info">
                 <div class="user-photo" data-role="user-photo"></div>
                 <div class="user-name" data-role="user-name"></div>
+                <button type="button" class="btn btn-light btn-sm" id="change-photo-button" data-bs-toggle="modal" data-bs-target="#change-photo">
+                  Изменить фото
+                </button>
             </div>
 
             <div class="user-list-container">
@@ -206,6 +229,23 @@
             <div class="input-container" data-role="message-sender">
                 <input class="message-input" data-role="message-input" type="text" placeholder="сообщение"/>
                 <button class="send-button" data-role="message-send-button">Отправить</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="change-photo" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="user-photo-change" data-role="user-photo-change"></div>
+                    <p>Загрузите фото по кнопке</p>
+                    <p> или перетащите новую на место старой</p>
+                </div>
+                <div class="modal-footer">
+                    <input type="file" class="btn btn-primary" data-role="user-photo-input" title="Загрузить фото">
+                    <button type="button" class="btn btn-light" data-bs-dismiss="modal">Закрыть</button>
+                </div>
             </div>
         </div>
     </div>

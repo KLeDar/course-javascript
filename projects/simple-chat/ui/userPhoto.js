@@ -9,6 +9,18 @@ export default class UserPhoto {
       }
     });
 
+    document
+      .querySelector('[data-role=user-photo-input]')
+      .addEventListener('change', (e) => {
+        const input = document.querySelector('[data-role=user-photo-input]');
+        const reader = new FileReader();
+        reader.readAsDataURL(input.files[0]);
+        console.log(reader.result);
+        reader.addEventListener('load', () => this.onUpload(reader.result));
+        e.preventDefault();
+        input.value = null;
+      });
+
     this.element.addEventListener('drop', (e) => {
       const file = e.dataTransfer.items[0].getAsFile();
       const reader = new FileReader();
@@ -21,5 +33,8 @@ export default class UserPhoto {
 
   set(photo) {
     this.element.style.backgroundImage = `url(${photo})`;
+    document.querySelector(
+      '[data-role=user-photo]'
+    ).style.backgroundImage = `url(${photo})`;
   }
 }
