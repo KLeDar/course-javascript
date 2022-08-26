@@ -1,0 +1,14 @@
+{
+  "proxy": {
+    "/simple-chat/ws": {
+      "target": "ws://localhost:8282",
+      "ws": true
+    },
+    "/simple-chat/upload-photo": {
+      "target": "http://localhost:8282"
+    },
+    "/simple-chat/photos": {
+      "target": "http://localhost:8282"
+    }
+  }
+}
