@@ -19,3 +19,6 @@
 ## Simple-Chat - Выпускное задание №2
 - `nodemon ./projects/simple-chat/server/index.js` - запустить бэкенда на сервере 
 - откройте проект на `http://127.0.0.1:8080/simple-chat`
+
+## VK-Friends - Выпускное задание №3
+- откройте проект на `http://127.0.0.1:8080/vk-friends`
