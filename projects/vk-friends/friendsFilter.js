@@ -19,8 +19,9 @@ export default class FriendsFilter {
     this.bestFriendsDOMFilter = document.querySelector(
       '[data-role=filter-input][data-list=best]'
     );
-
-    this.api = new VKAPI(8228543, 0);
+    // для создания своего приложения в VK перейди на dev.vk.com
+    // укажи ID и пермиссии приложения
+    this.api = new VKAPI(appId, perms);
     this.allFriends = new FriendsList(new VKStorage(this.api));
     this.bestFriends = new FriendsList(new LocalStorage(this.api, this.lsKey));
 
